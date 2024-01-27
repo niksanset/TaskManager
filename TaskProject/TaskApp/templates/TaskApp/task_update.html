@@ -1,0 +1,22 @@
+{% extends 'TaskApp/base.html' %}
+
+{% block title %}
+Task update
+{% endblock title %}
+
+{% block content %}
+
+<div class="book_create"  style="position: absolute;left: 600px;top: 70px; background-color: rgb(54, 54, 54);padding: 50px;border-radius: 50px;">
+    <h1 style="padding-bottom: 30px;">Task update</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+    </form>
+
+
+
+</div>
+
+   
+{% endblock content %}

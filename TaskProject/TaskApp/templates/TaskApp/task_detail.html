@@ -1,0 +1,29 @@
+{% extends 'TaskApp/base.html' %}
+{% load static %}
+
+{% block title %}
+Task detail
+{% endblock title %}
+
+
+{% block content %}
+<div  class="book_list" style="position: absolute;left: 300px;top: 80px; background-color: rgb(54, 54, 54,0.80 );padding: 50px;border-radius: 50px;width: 600px; height: 730px;">
+
+    <img src="" alt="" style="width: 25rem;border-radius: 10px;position: absolute;top: 100px;">
+    <p style="position: absolute; left: 100px; top: 20px; font-size: 40px;">{{ task}} </p>
+ 
+    <div style="width: 700px;position: absolute; left: 100px;top: 260px;">
+        <p> Описание задачи : {{ task.description  }}</p>
+        <p> Приоритет: {{ task.priority }}</p>
+        <p>Создан: {{ task.created_at }}</p>
+        <p> Дедлайн: {{ task.deadline }}</p>
+        <p>Статус: {{ task.status }}</p>
+        <p>Выполнен: {{ task.comleted_at }}</p>
+        <p>{{ task.image }}</p>
+    </div>
+    
+
+   
+
+</div>
+{% endblock content %}
